@@ -33,6 +33,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal = new javax.swing.JMenuBar();
         jmReproducir = new javax.swing.JMenu();
         jmCancion1 = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jmControles = new javax.swing.JMenu();
         jmAyuda = new javax.swing.JMenu();
 
@@ -73,17 +74,23 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
                 jmbBarraPrincipalComponentShown(evt);
             }
         });
-        jmbBarraPrincipal.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jmbBarraPrincipalPropertyChange(evt);
-            }
-        });
 
         jmReproducir.setBackground(new java.awt.Color(204, 204, 204));
         jmReproducir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\Downloads\\playbutton_120627.png")); // NOI18N
         jmReproducir.setMnemonic('R');
         jmReproducir.setText("Reproducir");
         jmReproducir.setOpaque(true);
+        jmReproducir.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+                jmReproducirMenuCanceled(evt);
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+                jmReproducirMenuDeselected(evt);
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jmReproducirMenuSelected(evt);
+            }
+        });
 
         jmCancion1.setBackground(new java.awt.Color(204, 255, 255));
         jmCancion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -93,6 +100,12 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmCancion1.setOpaque(true);
         jmReproducir.add(jmCancion1);
 
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setOpaque(true);
+        jmReproducir.add(jSeparator1);
+
         jmbBarraPrincipal.add(jmReproducir);
 
         jmControles.setBackground(new java.awt.Color(204, 204, 204));
@@ -100,6 +113,17 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmControles.setMnemonic('C');
         jmControles.setText("Controles");
         jmControles.setOpaque(true);
+        jmControles.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+                jmControlesMenuCanceled(evt);
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+                jmControlesMenuDeselected(evt);
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jmControlesMenuSelected(evt);
+            }
+        });
         jmbBarraPrincipal.add(jmControles);
 
         jmAyuda.setBackground(new java.awt.Color(204, 204, 204));
@@ -107,6 +131,16 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmAyuda.setMnemonic('A');
         jmAyuda.setText("Ayuda");
         jmAyuda.setOpaque(true);
+        jmAyuda.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuCanceled(javax.swing.event.MenuEvent evt) {
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+                jmAyudaMenuDeselected(evt);
+            }
+            public void menuSelected(javax.swing.event.MenuEvent evt) {
+                jmAyudaMenuSelected(evt);
+            }
+        });
         jmbBarraPrincipal.add(jmAyuda);
 
         setJMenuBar(jmbBarraPrincipal);
@@ -141,9 +175,37 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         System.out.println("El mouse salio de la barra principal");
     }//GEN-LAST:event_jmbBarraPrincipalMouseExited
 
-    private void jmbBarraPrincipalPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jmbBarraPrincipalPropertyChange
-        System.out.println("Propiedad cambiada: " + evt.getPropertyName());
-    }//GEN-LAST:event_jmbBarraPrincipalPropertyChange
+    private void jmReproducirMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmReproducirMenuSelected
+       System.out.println("El menu de reproducir esta abierto");
+    }//GEN-LAST:event_jmReproducirMenuSelected
+
+    private void jmReproducirMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmReproducirMenuDeselected
+        System.out.println("El menu de reproducir esta cerrado");
+    }//GEN-LAST:event_jmReproducirMenuDeselected
+
+    private void jmReproducirMenuCanceled(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmReproducirMenuCanceled
+        System.out.println("El menu de reproducir se cancelo");
+    }//GEN-LAST:event_jmReproducirMenuCanceled
+
+    private void jmControlesMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmControlesMenuSelected
+        System.out.println("El menu de controles esta abierto");
+    }//GEN-LAST:event_jmControlesMenuSelected
+
+    private void jmControlesMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmControlesMenuDeselected
+        System.out.println("El menu de controles esta cerrado");
+    }//GEN-LAST:event_jmControlesMenuDeselected
+
+    private void jmControlesMenuCanceled(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmControlesMenuCanceled
+        System.out.println("El menu de controles se cancelo");
+    }//GEN-LAST:event_jmControlesMenuCanceled
+
+    private void jmAyudaMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmAyudaMenuSelected
+        System.out.println("El menu de ayuda esta abierto");
+    }//GEN-LAST:event_jmAyudaMenuSelected
+
+    private void jmAyudaMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmAyudaMenuDeselected
+        System.out.println("El menu de ayuda esta cerrado");
+    }//GEN-LAST:event_jmAyudaMenuDeselected
     
     /**
      * @param args the command line arguments
@@ -172,6 +234,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenu jmAyuda;
     private javax.swing.JMenu jmCancion1;
     private javax.swing.JMenu jmControles;
