@@ -34,6 +34,8 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmReproducir = new javax.swing.JMenu();
         jmCancion1 = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jmControles = new javax.swing.JMenu();
         jmAyuda = new javax.swing.JMenu();
 
@@ -76,7 +78,6 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         });
 
         jmReproducir.setBackground(new java.awt.Color(204, 204, 204));
-        jmReproducir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\playbutton_120627.png")); // NOI18N
         jmReproducir.setMnemonic('R');
         jmReproducir.setText("Reproducir");
         jmReproducir.setOpaque(true);
@@ -94,7 +95,6 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
         jmCancion1.setBackground(new java.awt.Color(204, 255, 255));
         jmCancion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jmCancion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\music_file_icon_238198.png")); // NOI18N
         jmCancion1.setText("Cancion1");
         jmCancion1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jmCancion1.setOpaque(true);
@@ -106,10 +106,20 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jSeparator1.setOpaque(true);
         jmReproducir.add(jSeparator1);
 
+        jMenuItem1.setText("Cancion2");
+        jmReproducir.add(jMenuItem1);
+
+        jMenuItem2.setText("Salir");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jmReproducir.add(jMenuItem2);
+
         jmbBarraPrincipal.add(jmReproducir);
 
         jmControles.setBackground(new java.awt.Color(204, 204, 204));
-        jmControles.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\iconfinder-musicmelodysoundaudio50-4105531_113835.png")); // NOI18N
         jmControles.setMnemonic('C');
         jmControles.setText("Controles");
         jmControles.setOpaque(true);
@@ -127,7 +137,6 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal.add(jmControles);
 
         jmAyuda.setBackground(new java.awt.Color(204, 204, 204));
-        jmAyuda.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\exclamation-sign_icon-icons.com_73579.png")); // NOI18N
         jmAyuda.setMnemonic('A');
         jmAyuda.setText("Ayuda");
         jmAyuda.setOpaque(true);
@@ -206,6 +215,10 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     private void jmAyudaMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmAyudaMenuDeselected
         System.out.println("El menu de ayuda esta cerrado");
     }//GEN-LAST:event_jmAyudaMenuDeselected
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -233,6 +246,8 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenu jmAyuda;
