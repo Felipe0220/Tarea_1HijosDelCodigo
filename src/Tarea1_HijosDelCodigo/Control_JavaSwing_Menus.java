@@ -76,7 +76,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         });
 
         jmReproducir.setBackground(new java.awt.Color(204, 204, 204));
-        jmReproducir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\Downloads\\playbutton_120627.png")); // NOI18N
+        jmReproducir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\playbutton_120627.png")); // NOI18N
         jmReproducir.setMnemonic('R');
         jmReproducir.setText("Reproducir");
         jmReproducir.setOpaque(true);
@@ -94,7 +94,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
         jmCancion1.setBackground(new java.awt.Color(204, 255, 255));
         jmCancion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jmCancion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\Downloads\\music_file_icon_238198.png")); // NOI18N
+        jmCancion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\music_file_icon_238198.png")); // NOI18N
         jmCancion1.setText("Cancion1");
         jmCancion1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jmCancion1.setOpaque(true);
@@ -109,7 +109,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal.add(jmReproducir);
 
         jmControles.setBackground(new java.awt.Color(204, 204, 204));
-        jmControles.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\Downloads\\iconfinder-musicmelodysoundaudio50-4105531_113835.png")); // NOI18N
+        jmControles.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\iconfinder-musicmelodysoundaudio50-4105531_113835.png")); // NOI18N
         jmControles.setMnemonic('C');
         jmControles.setText("Controles");
         jmControles.setOpaque(true);
@@ -127,7 +127,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal.add(jmControles);
 
         jmAyuda.setBackground(new java.awt.Color(204, 204, 204));
-        jmAyuda.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\Downloads\\exclamation-sign_icon-icons.com_73579.png")); // NOI18N
+        jmAyuda.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\imagenes\\exclamation-sign_icon-icons.com_73579.png")); // NOI18N
         jmAyuda.setMnemonic('A');
         jmAyuda.setText("Ayuda");
         jmAyuda.setOpaque(true);
