@@ -43,7 +43,11 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem4 = new javax.swing.JMenuItem();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
+        lblRepetir = new javax.swing.JLabel();
         jmbBarraPrincipal = new javax.swing.JMenuBar();
         jmReproducir = new javax.swing.JMenu();
         jmCancion1 = new javax.swing.JMenu();
@@ -51,6 +55,8 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jmControles = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        chkRepetirCancion = new javax.swing.JCheckBoxMenuItem();
         modoOscuroItem = new javax.swing.JMenu();
         modoClaroItem = new javax.swing.JRadioButtonMenuItem();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
@@ -76,21 +82,35 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jMenuItem4.setText("Salir");
         jPopupMenu1.add(jMenuItem4);
 
+        jMenu2.setText("File");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Edit");
+        jMenuBar1.add(jMenu3);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jPanel1.setComponentPopupMenu(jPopupMenu1);
 
+        lblRepetir.setText("Repetir: OFF");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 985, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(526, Short.MAX_VALUE)
+                .addComponent(lblRepetir)
+                .addGap(76, 76, 76))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(497, Short.MAX_VALUE)
+                .addComponent(lblRepetir)
+                .addGap(31, 31, 31))
         );
 
         jmbBarraPrincipal.setBackground(new java.awt.Color(204, 255, 255));
@@ -172,6 +192,20 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
                 jmControlesMenuSelected(evt);
             }
         });
+
+        jMenu4.setText("Opciones");
+
+        chkRepetirCancion.setSelected(true);
+        chkRepetirCancion.setText("Repetir Canción");
+        chkRepetirCancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkRepetirCancionActionPerformed(evt);
+            }
+        });
+        jMenu4.add(chkRepetirCancion);
+
+        jmControles.add(jMenu4);
+
         jmbBarraPrincipal.add(jmControles);
 
         modoOscuroItem.setBackground(new java.awt.Color(204, 204, 204));
@@ -216,11 +250,15 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 197, Short.MAX_VALUE))
         );
 
         pack();
@@ -302,6 +340,14 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         }
     }        // TODO add your handling code here:
     }//GEN-LAST:event_modoClaroItemActionPerformed
+
+    private void chkRepetirCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRepetirCancionActionPerformed
+        if (chkRepetirCancion.isSelected()) {
+            lblRepetir.setText("Repetir: ON");
+        } else {
+            lblRepetir.setText("Repetir: OFF");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_chkRepetirCancionActionPerformed
     
     /**
      * @param args the command line arguments
@@ -333,7 +379,12 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     private javax.swing.JMenuItem Opcion2;
     private javax.swing.JMenuItem SubOpcion;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JCheckBoxMenuItem chkRepetirCancion;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -348,6 +399,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     private javax.swing.JMenu jmControles;
     private javax.swing.JMenu jmReproducir;
     private javax.swing.JMenuBar jmbBarraPrincipal;
+    private javax.swing.JLabel lblRepetir;
     private javax.swing.JRadioButtonMenuItem modoClaroItem;
     private javax.swing.JMenu modoOscuroItem;
     // End of variables declaration//GEN-END:variables
