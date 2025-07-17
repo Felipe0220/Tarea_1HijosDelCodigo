@@ -22,7 +22,6 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
      */
     public Control_JavaSwing_Menus() {
         initComponents();
-        jmbBarraPrincipal.setVisible(true);
     }
 
     /**
@@ -49,17 +48,20 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         lblRepetir = new javax.swing.JLabel();
+        btnAlternarMenu = new javax.swing.JButton();
         jmbBarraPrincipal = new javax.swing.JMenuBar();
         jmReproducir = new javax.swing.JMenu();
         jmCancion1 = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenuItem2 = new javax.swing.JMenuItem();
         jmControles = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         chkRepetirCancion = new javax.swing.JCheckBoxMenuItem();
         modoOscuroItem = new javax.swing.JMenu();
         modoClaroItem = new javax.swing.JRadioButtonMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
 
         Opcion1.setText("Abrir");
@@ -91,25 +93,38 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jPanel1.setComponentPopupMenu(jPopupMenu1);
 
         lblRepetir.setText("Repetir: OFF");
+
+        btnAlternarMenu.setBackground(new java.awt.Color(204, 204, 204));
+        btnAlternarMenu.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnAlternarMenu.setText("Alternar menu");
+        btnAlternarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlternarMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(526, Short.MAX_VALUE)
+                .addContainerGap(782, Short.MAX_VALUE)
                 .addComponent(lblRepetir)
                 .addGap(76, 76, 76))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(btnAlternarMenu)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(497, Short.MAX_VALUE)
+                .addComponent(btnAlternarMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 655, Short.MAX_VALUE)
                 .addComponent(lblRepetir)
                 .addGap(31, 31, 31))
         );
@@ -137,6 +152,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         });
 
         jmReproducir.setBackground(new java.awt.Color(204, 204, 204));
+        jmReproducir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\playbutton_120627.png")); // NOI18N
         jmReproducir.setMnemonic('R');
         jmReproducir.setText("Reproducir");
         jmReproducir.setOpaque(true);
@@ -154,6 +170,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
         jmCancion1.setBackground(new java.awt.Color(204, 255, 255));
         jmCancion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jmCancion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\music_file_icon_238198.png")); // NOI18N
         jmCancion1.setText("Cancion1");
         jmCancion1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jmCancion1.setOpaque(true);
@@ -165,10 +182,26 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jSeparator1.setOpaque(true);
         jmReproducir.add(jSeparator1);
 
+        jMenuItem1.setBackground(new java.awt.Color(204, 255, 255));
+        jMenuItem1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\music_file_icon_238198.png")); // NOI18N
         jMenuItem1.setText("Cancion2");
+        jMenuItem1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jMenuItem1.setOpaque(true);
         jmReproducir.add(jMenuItem1);
 
+        jSeparator4.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator4.setOpaque(true);
+        jmReproducir.add(jSeparator4);
+
+        jMenuItem2.setBackground(new java.awt.Color(204, 255, 255));
+        jMenuItem2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\emblemunreadable_93487.png")); // NOI18N
         jMenuItem2.setText("Salir");
+        jMenuItem2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jMenuItem2.setOpaque(true);
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -179,6 +212,8 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal.add(jmReproducir);
 
         jmControles.setBackground(new java.awt.Color(204, 204, 204));
+        jmControles.setBorder(null);
+        jmControles.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\iconfinder-musicmelodysoundaudio50-4105531_113835.png")); // NOI18N
         jmControles.setMnemonic('C');
         jmControles.setText("Controles");
         jmControles.setOpaque(true);
@@ -194,10 +229,20 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
             }
         });
 
+        jMenu4.setBackground(new java.awt.Color(204, 255, 255));
+        jMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\menuoptions_85724.png")); // NOI18N
         jMenu4.setText("Opciones");
+        jMenu4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jMenu4.setOpaque(true);
 
+        chkRepetirCancion.setBackground(new java.awt.Color(204, 255, 255));
+        chkRepetirCancion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         chkRepetirCancion.setSelected(true);
         chkRepetirCancion.setText("Repetir Canción");
+        chkRepetirCancion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        chkRepetirCancion.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\repeatoutline_110883.png")); // NOI18N
+        chkRepetirCancion.setOpaque(true);
         chkRepetirCancion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chkRepetirCancionActionPerformed(evt);
@@ -210,6 +255,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmbBarraPrincipal.add(jmControles);
 
         modoOscuroItem.setBackground(new java.awt.Color(204, 204, 204));
+        modoOscuroItem.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\settings_gear_options_option_icon-icons.com_59985.png")); // NOI18N
         modoOscuroItem.setMnemonic('A');
         modoOscuroItem.setText("Configuración");
         modoOscuroItem.setOpaque(true);
@@ -224,8 +270,13 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
             }
         });
 
+        modoClaroItem.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(modoClaroItem);
+        modoClaroItem.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         modoClaroItem.setText("Modo Claro");
+        modoClaroItem.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        modoClaroItem.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\sphere_ball_icon_231267.png")); // NOI18N
+        modoClaroItem.setOpaque(true);
         modoClaroItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modoClaroItemActionPerformed(evt);
@@ -233,9 +284,20 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         });
         modoOscuroItem.add(modoClaroItem);
 
+        jSeparator5.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator5.setOpaque(true);
+        modoOscuroItem.add(jSeparator5);
+
+        jRadioButtonMenuItem1.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButtonMenuItem1);
+        jRadioButtonMenuItem1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("Modo Oscuro");
+        jRadioButtonMenuItem1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jRadioButtonMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Luisf\\OneDrive\\Documentos\\ProyectosJava\\Tarea1HijosDelCodigo\\src iconos\\8ballicon_98498.png")); // NOI18N
+        jRadioButtonMenuItem1.setOpaque(true);
         jRadioButtonMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMenuItem1ActionPerformed(evt);
@@ -251,15 +313,11 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 197, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -346,6 +404,11 @@ private void cambiarColores(Container contenedor, Color fondo, Color texto) {
             lblRepetir.setText("Repetir: OFF");
         }        // TODO add your handling code here:
     }//GEN-LAST:event_chkRepetirCancionActionPerformed
+
+    private void btnAlternarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlternarMenuActionPerformed
+        boolean visible = jmbBarraPrincipal.isVisible();
+        jmbBarraPrincipal.setVisible(!visible);
+    }//GEN-LAST:event_btnAlternarMenuActionPerformed
     
     /**
      * @param args the command line arguments
@@ -376,6 +439,7 @@ private void cambiarColores(Container contenedor, Color fondo, Color texto) {
     private javax.swing.JMenuItem Opcion1;
     private javax.swing.JMenuItem Opcion2;
     private javax.swing.JMenuItem SubOpcion;
+    private javax.swing.JButton btnAlternarMenu;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBoxMenuItem chkRepetirCancion;
     private javax.swing.JMenu jMenu1;
@@ -393,6 +457,8 @@ private void cambiarColores(Container contenedor, Color fondo, Color texto) {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JMenu jmCancion1;
     private javax.swing.JMenu jmControles;
     private javax.swing.JMenu jmReproducir;
