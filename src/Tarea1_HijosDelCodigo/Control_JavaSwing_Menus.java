@@ -6,6 +6,7 @@ package Tarea1_HijosDelCodigo;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Container;
 import javax.swing.JPanel;
 
 /**
@@ -318,29 +319,26 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
 
     private void jRadioButtonMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem1ActionPerformed
    // Cambiar el fondo y color del JFrame
-    getContentPane().setBackground(Color.DARK_GRAY);
+   cambiarColores(this.getContentPane(), Color.BLACK, Color.WHITE);
 
-    // Cambiar color de letra de todos los componentes (ejemplo para un label)
-    // Puedes repetir esto para otros componentes como botones, paneles, etc.
-    for (Component c : getContentPane().getComponents()) {
-        c.setForeground(Color.WHITE);
-        if (c instanceof JPanel) {
-            c.setBackground(Color.DARK_GRAY);
-        }
-    }        // TODO add your handling code here:
+           // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
 
     private void modoClaroItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoClaroItemActionPerformed
- getContentPane().setBackground(Color.WHITE);
-
-    for (Component c : getContentPane().getComponents()) {
-        c.setForeground(Color.BLACK);
-        if (c instanceof JPanel) {
-            c.setBackground(Color.WHITE);
-        }
-    }        // TODO add your handling code here:
+ cambiarColores(this.getContentPane(), Color.WHITE, Color.BLACK);
+       // TODO add your handling code here:
     }//GEN-LAST:event_modoClaroItemActionPerformed
+private void cambiarColores(Container contenedor, Color fondo, Color texto) {
+    contenedor.setBackground(fondo);
 
+    for (Component c : contenedor.getComponents()) {
+        c.setForeground(texto);
+
+        if (c instanceof Container) {
+            cambiarColores((Container) c, fondo, texto); // Llama recursivamente a los contenedores internos
+        }
+    }
+}
     private void chkRepetirCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRepetirCancionActionPerformed
         if (chkRepetirCancion.isSelected()) {
             lblRepetir.setText("Repetir: ON");
