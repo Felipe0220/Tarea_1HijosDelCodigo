@@ -4,6 +4,10 @@
  */
 package Tarea1_HijosDelCodigo;
 
+import java.awt.Color;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Luisf
@@ -38,6 +42,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem4 = new javax.swing.JMenuItem();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jmbBarraPrincipal = new javax.swing.JMenuBar();
         jmReproducir = new javax.swing.JMenu();
@@ -46,7 +51,9 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jmControles = new javax.swing.JMenu();
-        jmAyuda = new javax.swing.JMenu();
+        modoOscuroItem = new javax.swing.JMenu();
+        modoClaroItem = new javax.swing.JRadioButtonMenuItem();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
 
         Opcion1.setText("Abrir");
         jPopupMenu1.add(Opcion1);
@@ -167,21 +174,41 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         });
         jmbBarraPrincipal.add(jmControles);
 
-        jmAyuda.setBackground(new java.awt.Color(204, 204, 204));
-        jmAyuda.setMnemonic('A');
-        jmAyuda.setText("Ayuda");
-        jmAyuda.setOpaque(true);
-        jmAyuda.addMenuListener(new javax.swing.event.MenuListener() {
+        modoOscuroItem.setBackground(new java.awt.Color(204, 204, 204));
+        modoOscuroItem.setMnemonic('A');
+        modoOscuroItem.setText("Configuración");
+        modoOscuroItem.setOpaque(true);
+        modoOscuroItem.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuDeselected(javax.swing.event.MenuEvent evt) {
-                jmAyudaMenuDeselected(evt);
+                modoOscuroItemMenuDeselected(evt);
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
-                jmAyudaMenuSelected(evt);
+                modoOscuroItemMenuSelected(evt);
             }
         });
-        jmbBarraPrincipal.add(jmAyuda);
+
+        buttonGroup1.add(modoClaroItem);
+        modoClaroItem.setText("Modo Claro");
+        modoClaroItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modoClaroItemActionPerformed(evt);
+            }
+        });
+        modoOscuroItem.add(modoClaroItem);
+
+        buttonGroup1.add(jRadioButtonMenuItem1);
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("Modo Oscuro");
+        jRadioButtonMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem1ActionPerformed(evt);
+            }
+        });
+        modoOscuroItem.add(jRadioButtonMenuItem1);
+
+        jmbBarraPrincipal.add(modoOscuroItem);
 
         setJMenuBar(jmbBarraPrincipal);
 
@@ -239,17 +266,42 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         System.out.println("El menu de controles se cancelo");
     }//GEN-LAST:event_jmControlesMenuCanceled
 
-    private void jmAyudaMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmAyudaMenuSelected
+    private void modoOscuroItemMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_modoOscuroItemMenuSelected
         System.out.println("El menu de ayuda esta abierto");
-    }//GEN-LAST:event_jmAyudaMenuSelected
+    }//GEN-LAST:event_modoOscuroItemMenuSelected
 
-    private void jmAyudaMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_jmAyudaMenuDeselected
+    private void modoOscuroItemMenuDeselected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_modoOscuroItemMenuDeselected
         System.out.println("El menu de ayuda esta cerrado");
-    }//GEN-LAST:event_jmAyudaMenuDeselected
+    }//GEN-LAST:event_modoOscuroItemMenuDeselected
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jRadioButtonMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem1ActionPerformed
+   // Cambiar el fondo y color del JFrame
+    getContentPane().setBackground(Color.DARK_GRAY);
+
+    // Cambiar color de letra de todos los componentes (ejemplo para un label)
+    // Puedes repetir esto para otros componentes como botones, paneles, etc.
+    for (Component c : getContentPane().getComponents()) {
+        c.setForeground(Color.WHITE);
+        if (c instanceof JPanel) {
+            c.setBackground(Color.DARK_GRAY);
+        }
+    }        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
+
+    private void modoClaroItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoClaroItemActionPerformed
+ getContentPane().setBackground(Color.WHITE);
+
+    for (Component c : getContentPane().getComponents()) {
+        c.setForeground(Color.BLACK);
+        if (c instanceof JPanel) {
+            c.setBackground(Color.WHITE);
+        }
+    }        // TODO add your handling code here:
+    }//GEN-LAST:event_modoClaroItemActionPerformed
     
     /**
      * @param args the command line arguments
@@ -280,6 +332,7 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     private javax.swing.JMenuItem Opcion1;
     private javax.swing.JMenuItem Opcion2;
     private javax.swing.JMenuItem SubOpcion;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -287,13 +340,15 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
-    private javax.swing.JMenu jmAyuda;
     private javax.swing.JMenu jmCancion1;
     private javax.swing.JMenu jmControles;
     private javax.swing.JMenu jmReproducir;
     private javax.swing.JMenuBar jmbBarraPrincipal;
+    private javax.swing.JRadioButtonMenuItem modoClaroItem;
+    private javax.swing.JMenu modoOscuroItem;
     // End of variables declaration//GEN-END:variables
 }
