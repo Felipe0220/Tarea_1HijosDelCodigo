@@ -29,6 +29,15 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        Opcion1 = new javax.swing.JMenuItem();
+        Opcion2 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenu1 = new javax.swing.JMenu();
+        SubOpcion = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jmbBarraPrincipal = new javax.swing.JMenuBar();
         jmReproducir = new javax.swing.JMenu();
@@ -39,16 +48,38 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
         jmControles = new javax.swing.JMenu();
         jmAyuda = new javax.swing.JMenu();
 
+        Opcion1.setText("Abrir");
+        jPopupMenu1.add(Opcion1);
+
+        Opcion2.setText("Actualizar");
+        jPopupMenu1.add(Opcion2);
+        jPopupMenu1.add(jSeparator2);
+
+        jMenu1.setText("nuevo");
+
+        SubOpcion.setText("Archivo Vacio");
+        jMenu1.add(SubOpcion);
+
+        jMenuItem3.setText("Archivo vacio2");
+        jMenu1.add(jMenuItem3);
+
+        jPopupMenu1.add(jMenu1);
+        jPopupMenu1.add(jSeparator3);
+
+        jMenuItem4.setText("Salir");
+        jPopupMenu1.add(jMenuItem4);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.setComponentPopupMenu(jPopupMenu1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 998, Short.MAX_VALUE)
+            .addGap(0, 985, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,10 +277,19 @@ public class Control_JavaSwing_Menus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Opcion1;
+    private javax.swing.JMenuItem Opcion2;
+    private javax.swing.JMenuItem SubOpcion;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenu jmAyuda;
     private javax.swing.JMenu jmCancion1;
     private javax.swing.JMenu jmControles;
